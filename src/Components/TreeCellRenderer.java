@@ -3,8 +3,9 @@ package Components;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
+import java.awt.event.KeyEvent;
 
-import javax.swing.JTree;
+import javax.swing.*;
 import javax.swing.tree.DefaultTreeCellRenderer;
 
 import Utility.ImageLoader;
@@ -19,11 +20,11 @@ public class TreeCellRenderer extends DefaultTreeCellRenderer{
 			boolean hasFocus) {
 
 		Component c = super.getTreeCellRendererComponent(tree, value,
-                selected, expanded, leaf, row, hasFocus);
+                sel, expanded, leaf, row, hasFocus);
 		
 		setOpaque(false);
 		setFont(new Font("Ubuntu", Font.PLAIN, 14));
-		
+
 		if(getText().equalsIgnoreCase("Files opened: ")){
 			return c;
 		}
